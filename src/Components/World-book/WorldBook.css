@@ -1,0 +1,28 @@
+.component-container2 {
+    background-image: url('../../Images/evening-view-of-prague-bridges-over-vltava-river.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    position: relative;  
+  }
+  
+  .background-image2 {
+background-image: url('../../Images/back-view-of-friends-traveling-in-forest-in-sunny-day-with-backpacks-camping-outdoor.jpg'); /* Replace with your image URL */
+background-size: cover;
+    background-attachment: fixed; /* This makes the background fixed */
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .content2 {
+    padding: 20px;
+  }
+  

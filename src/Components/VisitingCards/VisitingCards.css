@@ -1,0 +1,225 @@
+.custom-card1 {
+    border: 1px solid #ccc;
+    width: 25rem;
+    position: relative;
+    height: 30rem;
+    padding: 10px;
+    background: url('../../Images/woman-with-backpack-exploring-bali-indonesia-.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+}
+
+.custom-card1::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.2); /* Black with 20% opacity for a lighter overlay */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.custom-card2::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.2); /* Black with 20% opacity for a lighter overlay */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.custom-card3::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.2); /* Black with 20% opacity for a lighter overlay */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.custom-card4::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.2); /* Black with 20% opacity for a lighter overlay */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.custom-card5::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.2); /* Black with 20% opacity for a lighter overlay */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.custom-card6::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.2); /* Black with 20% opacity for a lighter overlay */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.custom-card1:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.6);
+    -webkit-transition:all 0.5s;
+    transition:all 0.5s;
+    cursor:pointer;
+    z-index: 1;
+}
+.popular-tag {
+    position: absolute;
+    top: 10px; /* Adjust the top positioning as needed */
+    left: 7px; /* Adjust the left positioning as needed */
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.custom-card3{
+    border: 1px solid #ccc;
+    width: 25rem;
+    position: relative;
+    height:  30rem;
+    padding: 10px;
+    background: url('../../Images/eiffel-tower-in-paris.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; 
+}
+.custom-card3:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.6);
+    -webkit-transition:all 0.5s;
+    transition:all 0.5s;
+    cursor:pointer;
+    z-index: 1;
+}
+
+.custom-card2{
+    border: 1px solid #ccc;
+    width: 25rem;
+    position: relative;
+    height:  30rem;
+    padding: 10px;
+    background: url('../../Images/fukuoka-japan-skyline.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; 
+}
+.custom-card2:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.6);
+    -webkit-transition:all 0.5s;
+    transition:all 0.5s;
+    cursor:pointer;
+    z-index: 1;
+}
+
+.custom-card4{
+    border: 1px solid #ccc;
+    width: 25rem;
+    position: relative;
+    height:  30rem;
+    padding: 10px;
+    background: url('../../Images/australian-coastline.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; 
+}
+.custom-card4:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.6);
+    -webkit-transition:all 0.5s;
+    transition:all 0.5s;
+    cursor:pointer;
+    z-index: 1;
+}
+.custom-card5{
+    border: 1px solid #ccc;
+    width: 25rem;
+    position: relative;
+    height:  30rem;
+    padding: 10px;
+    background: url('../../Images/grand-canyon-arizona-usa-landscape.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; 
+}
+.custom-card5:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.6);
+    -webkit-transition:all 0.5s;
+    transition:all 0.5s;
+    cursor:pointer;
+    z-index: 1;
+}
+.custom-card6{
+    border: 1px solid #ccc;
+    width: 25rem;
+    position: relative;
+    height:  30rem;
+    padding: 10px;
+    background: url('../../Images/evening-view-of-prague-bridges-over-vltava-river.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; 
+}
+.custom-card6:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.6);
+    -webkit-transition:all 0.5s;
+    transition:all 0.5s;
+    cursor:pointer;
+    z-index: 1;
+}
+
+.custom-card h3 {
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.custom-card p {
+    padding: 10px;
+}
+
+.custom-card a {
+    display: block;
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+.visitCard-button{
+    border: 2px solid white;
+    padding:  10px 20px;
+}
+.visitCard-button:hover{
+     background-color:  #313E64;  
+     border: none;
+  transition: background-color 0.3s; 
+}
+@media screen and (max-width: 768px) {
+    .Visiting-Cards{
+        width: auto;
+    }
+  }
+  

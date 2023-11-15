@@ -1,0 +1,36 @@
+.component-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  position: relative;
+}
+
+.background-image {
+  background-image: url('../../Images/back-view-of-friends-traveling-in-forest-in-sunny-day-with-backpacks-camping-outdoor.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 0;
+}
+
+.content {
+  padding: 20px;
+  position: relative; /* Add this line to make it a positioned container */
+  z-index: 1;
+}

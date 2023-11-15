@@ -1,0 +1,100 @@
+  /* Style the form container */
+  .elementor-form-fields-wrapper {
+    width: 100%;
+    display: flex;
+    justify-self: center;
+    /* justify-content: center; */
+    align-items: center;
+    margin: auto;
+    background: white;
+    padding: 30px 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* border: 5px solid black; */
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    bottom: 0px;
+  }
+
+  /* Style the form field group */
+  .elementor-field-group {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  /* Style the labels */
+  .elementor-field-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+
+  /* Style the select input */
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Style the number input */
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Style the date input */
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Style the submit button */
+  .elementor-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+/* Custom styles for select element */
+.custom-select {
+    width: 100%;
+    padding: 10px 20px ;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Custom styles for input elements */
+  .custom-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Custom styles for the button */
+  .custom-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  /* Additional styles can be added as needed to match your design */
+  

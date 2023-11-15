@@ -1,0 +1,16 @@
+.footer-image::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.2); /* Black with 20% opacity for a lighter overlay */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.footer-image {
+    position: relative;
+    background-color: #313E64;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

@@ -1,0 +1,38 @@
+.main-Offer-card{
+padding: 20px 0px;
+}
+.Offer-card {
+  width: 350px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 40px;
+  margin-right: 20px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  text-align: center;
+}
+
+.Offer-card h1 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.Offer-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+
+@media (max-width: 768px) {
+  /* Apply different styles for small viewports */
+  .Offer-card {
+    margin-right : 0px;
+    margin-bottom: 20px;
+    width: 100%; /* Make the card full width on small screens */
+    box-shadow: none; /* Remove the box shadow on small screens */
+  }
+}
+
+  
+  
+  
+  

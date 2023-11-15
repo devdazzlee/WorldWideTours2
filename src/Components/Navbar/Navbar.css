@@ -1,0 +1,9 @@
+    .phone-icon{
+        color: #0391B8;
+    }
+    @media (max-width: 768px) {
+        /* Apply the white background color to the navigation bar */
+        nav {
+            background-color: white;
+        }
+    }

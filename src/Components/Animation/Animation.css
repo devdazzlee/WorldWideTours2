@@ -1,0 +1,52 @@
+.fade-up-element {
+    animation: fadeUp 1.5s ease;
+  }
+  
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
+  /* Create a CSS animation */
+  @keyframes fadeFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Apply the animation to the element you want to animate */
+  .fade-from-right {
+    animation: fadeFromRight 1s ease-in-out;
+  }
+  
+ /* Define the keyframes for the animation */
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation to an element */
+.element-to-animate {
+  animation: fadeLeft 1s ease-in-out;
+  /* You can customize the duration and timing function as needed */
+}
+
+  
