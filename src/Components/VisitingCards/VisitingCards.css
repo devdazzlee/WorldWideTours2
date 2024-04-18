@@ -4,7 +4,7 @@
     position: relative;
     height: 30rem;
     padding: 10px;
-    background: url('../../Images/woman-with-backpack-exploring-bali-indonesia-.jpg') no-repeat center center;
+    background: url('../../Images/Turkey.png') no-repeat center center;
     background-size: cover;
     color: #fff;
     position: relative;
@@ -79,7 +79,7 @@
     position: absolute;
     top: 10px; /* Adjust the top positioning as needed */
     left: 7px; /* Adjust the left positioning as needed */
-    background-color: #007BFF;
+    background-color: #0090B7;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -93,7 +93,7 @@
     position: relative;
     height:  30rem;
     padding: 10px;
-    background: url('../../Images/eiffel-tower-in-paris.jpg') no-repeat center center;
+    background: url('../../Images/UK.png') no-repeat center center;
     background-size: cover;
     color: #fff; 
 }
@@ -114,7 +114,7 @@
     position: relative;
     height:  30rem;
     padding: 10px;
-    background: url('../../Images/fukuoka-japan-skyline.jpg') no-repeat center center;
+    background: url('../../Images/USA.png') no-repeat center center;
     background-size: cover;
     color: #fff; 
 }
@@ -135,7 +135,7 @@
     position: relative;
     height:  30rem;
     padding: 10px;
-    background: url('../../Images/australian-coastline.jpg') no-repeat center center;
+    background: url('../../Images/Thilandtt.jpg') no-repeat center center;
     background-size: cover;
     color: #fff; 
 }
@@ -155,7 +155,7 @@
     position: relative;
     height:  30rem;
     padding: 10px;
-    background: url('../../Images/grand-canyon-arizona-usa-landscape.jpg') no-repeat center center;
+    background: url('../../Images/malaysia.png') no-repeat center center;
     background-size: cover;
     color: #fff; 
 }
@@ -175,7 +175,7 @@
     position: relative;
     height:  30rem;
     padding: 10px;
-    background: url('../../Images/evening-view-of-prague-bridges-over-vltava-river.jpg') no-repeat center center;
+    background: url('../../Images/Singapore.png') no-repeat center center;
     background-size: cover;
     color: #fff; 
 }
@@ -190,6 +190,50 @@
     z-index: 1;
 }
 
+
+.custom-card7{
+    border: 1px solid #ccc;
+    width: 25rem;
+    position: relative;
+    height:  30rem;
+    padding: 10px;
+    background: url('../../Images/europe.png') no-repeat center center;
+    background-size: cover;
+    color: #fff; 
+}
+.custom-card7:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.6);
+    -webkit-transition:all 0.5s;
+    transition:all 0.5s;
+    cursor:pointer;
+    z-index: 1;
+}
+
+.custom-card8{
+    border: 1px solid #ccc;
+    width: 25rem;
+    position: relative;
+    height:  30rem;
+    padding: 10px;
+    background: url('../../Images/Dubai.png') no-repeat center center;
+    background-size: cover;
+    color: #fff; 
+}
+.custom-card8:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.6);
+    -webkit-transition:all 0.5s;
+    transition:all 0.5s;
+    cursor:pointer;
+    z-index: 1;
+}
+
+
 .custom-card h3 {
     font-size: 1.5rem;
     padding: 10px;
@@ -202,7 +246,7 @@
 .custom-card a {
     display: block;
     text-align: center;
-    background-color: #007BFF;
+    background-color: #0090B7;
     color: #fff;
     text-decoration: none;
     padding: 10px 0;

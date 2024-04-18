@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import '../Animation/Animation.css'
+import Form from '../Form/Form';
 const DetailTours = () => {
   useEffect(() => {
     // Add your scroll animation logic here
@@ -20,10 +21,21 @@ const DetailTours = () => {
     };
   }, []);
   return (
-    <div  className='flex flex-col items-center mt-36 '>
-    <h1 className='main-center-heading text-4xl md:text-6xl font-bold text-white my-2 md:my-4'>Tours</h1>
-    <p className='main-center-heading text-lg md:text-2xl font-bold mt-2 md:mt-4 text-white text-center'>We are professional planners for your vacations.</p>
-  </div>
+    <div className='flex justify-center py-12   flex-wrap'  >
+    <div     className='flex flex-col justify-center		 md:px-12 px-2' >
+    
+    <h3  class="text-white text-2xl md:text-2xl font-bold" >Tours</h3>
+          <h1  class="text-white text-3xl md:text-6xl font-bold my-2 md:my-4">
+          We are professional planners <br class="hidden md:inline" />   for your vacations.
+          </h1>
+
+    
+    </div>
+    
+    <div  className='  md:mt-0 mt-10' >
+    <Form />
+    </div>
+    </div>
   
   )
 }

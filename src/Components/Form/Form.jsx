@@ -1,18 +1,28 @@
-import React, { useState, useRef, useEffect } from 'react';
-import '../Dropdown/Dropdown.css';
+import React, { useState, useRef, useEffect } from "react";
+import "../Dropdown/Dropdown.css";
 import Select, { components } from "react-select";
-import { Country, State, City } from 'country-state-city';
-import '../Animation/Animation.css';
-import './Form.css';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import axios from 'axios';
-import { LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
-import { TextField } from '@mui/material';
-import { CustomDropdown } from '../Dropdown/Dropdown';
+import '../Card/Card.css'
+import { Country, State, City } from "country-state-city";
+import {
+  Unstable_NumberInput as BaseNumberInput,
+  numberInputClasses,
+} from "@mui/base/Unstable_NumberInput";
+import "../Animation/Animation.css";
+import "./Form.css";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import axios from "axios";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { TextField } from "@mui/material";
+import { CustomDropdown } from "../Dropdown/Dropdown";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
-  const [name, setName] = useState('');
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const numberRef = useRef(null);
+  const [name, setName] = useState("");
   const [checkinDate, setCheckinDate] = useState(null);
   const [checkoutDate, setCheckoutDate] = useState(null);
   const [errors, setErrors] = useState({});
@@ -25,16 +35,12 @@ const Form = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const [quantity, setQuantity] = useState({});
-  const [people, setPeople] = useState(2);
+  const [people, setPeople] = useState(0);
   const dropdownRef = useRef(null);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
-    console.log(`Total Quantity: ${people}`);
   };
-
-  
-
 
   const handleIncrement = (option, e) => {
     e.stopPropagation();
@@ -44,7 +50,10 @@ const Form = () => {
 
   const handleDecrement = (option, e) => {
     e.stopPropagation();
-    setQuantity((prev) => ({ ...prev, [option]: Math.max(0, (prev[option] || 0) - 1) }));
+    setQuantity((prev) => ({
+      ...prev,
+      [option]: Math.max(0, (prev[option] || 0) - 1),
+    }));
     setPeople((prev) => Math.max(0, prev - 1)); // Decrement total quantity
   };
 
@@ -55,14 +64,13 @@ const Form = () => {
   };
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
-  const options = ['Adults', 'Childs', 'Infants'];
-
+  const options = ["Adults", "Childs", "Infants"];
 
   const fetchCities = async () => {
     if (!selectedCountry) return;
@@ -77,7 +85,7 @@ const Form = () => {
       }));
       setCities(formattedCities);
     } catch (error) {
-      console.error('Error fetching cities:', error);
+      console.error("Error fetching cities:", error);
     }
   };
 
@@ -85,7 +93,9 @@ const Form = () => {
     if (!selectedCountry) return;
 
     const selectedCountryIsoCode = selectedCountry.value;
-    const statesData = await State.getStatesOfCountry(selectedCountryIsoCode).map((state) => ({
+    const statesData = await State.getStatesOfCountry(
+      selectedCountryIsoCode
+    ).map((state) => ({
       value: state.isoCode,
       label: state.name,
     }));
@@ -93,7 +103,6 @@ const Form = () => {
   };
 
   useEffect(() => {
-    console.log(checkinDate)
     const fetchCountries = async () => {
       const countriesData = await Country.getAllCountries().map((country) => ({
         value: country.isoCode,
@@ -109,151 +118,186 @@ const Form = () => {
 
     fetchCountries();
     fetchStatesAndCities();
-  }, [selectedCountry, selectedState ]);
+  }, [selectedCountry, selectedState]);
 
   const handleCountryChange = (selectedOption) => {
-    setSelectedCountry(selectedOption); 
+    setSelectedCountry(selectedOption);
     setName(selectedOption.label);
   };
-  
+
   const handleSubmit = () => {
+    const nameValue = nameRef.current.value;
+    const emailValue = emailRef.current.value;
+    const numberValue = numberRef.current.value;
     const newErrors = {};
+    if (!nameValue) {
+      newErrors.nameValue = "Name is required";
+    }
+    if (!emailValue) {
+      newErrors.emailValue = "Email is required";
+    }
+    if (!numberValue) {
+      newErrors.numberValue = "Number is required";
+    }
 
     if (!name) {
-      newErrors.name = 'Name is required';
+      newErrors.name = "Country Name is required";
     }
 
     if (people < 1) {
-      newErrors.people = 'Number of people must be at least 1';
-    }
-
-    if (!checkinDate) {
-      newErrors.checkinDate = 'Checkin date is required';
-    }
-
-    if (checkinDate && checkoutDate && checkinDate > checkoutDate) {
-      newErrors.checkinDate = 'Checkin date must be before checkout date';
+      newErrors.people = "Number of people must be at least 1";
     }
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
       const formData = {
+        nameValue,
+        emailValue,
+        numberValue,
         name,
         people,
-        checkinDate,
-        checkoutDate,
       };
-console.log(formData)
-      axios.post('https://brown-bear-tutu.cyclic.app/api/v1/trip', formData)
-        .then(response => {
-          alert('Form has been submitted');
+      axios
+        .post("https://brown-bear-tutu.cyclic.app/api/v1/trip", formData)
+        .then((response) => {
+      
+          setName("");
+          setSelectedCountry(null);
+          setSelectedState(null);
+          setSelectedCity(null);
+          setIsOpen(false);
+          setQuantity({});
+          setPeople(0);
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        numberRef.current.value = "";
+        toast.success("Form submitted successfully!");
+
         })
-        .catch(error => {
-          console.error('Error creating trip:', error);
+        .catch((error) => {
+          toast.error("Error Occur !");
+    
         });
     }
   };
   const handleDateChange = (date) => {
-    setCheckinDate(date); 
+    setCheckinDate(date);
   };
-const handleCheckoutDateChange = (date) =>{
-  setCheckoutDate(date)
-}
-  
+  const handleCheckoutDateChange = (date) => {
+    setCheckoutDate(date);
+  };
 
   return (
-    <div   className='m-auto'   >
-      <div className="fade-up-element elementor-form-fields-wrapper elementor-labels-">
-      <Select
-  className='w-44 py-4 z-50	'
-  value={selectedCountry}
-  onChange={handleCountryChange}
-  options={countries}
-  placeholder="Select a Country"
-  style={{ fontFamily: 'YourChosenFont, sans-serif' }}
-/>
-
- <div className="relative inline-block z-50	">
-      <button
-        style={{ border: "1px solid #ccc" }}
-        className="text-white px-6 py-4 rounded "
-        onClick={handleToggle}
-      >
-        {selectedOption || (
-          <span
-            dangerouslySetInnerHTML={{
-              __html: '<i   class="fa fa-user" aria-hidden="true" style="color: #707070;"></i>',
-            }}
-          />
-        )}
-        <span className='text-black ml-4'>{people}</span>
-
-        <span
-          dangerouslySetInnerHTML={{
-            __html: '<i class="fa fa-caret-down text-black ml-4"  style="color: #707070;" aria-hidden="true" ></i>',
-          }}
+<div    style={{"border" :"1px solid black"}}  className={`flex justify-between flex-wrap m-auto bg-white rounded-xl	`}  >
+               <div className="flex flex-col mx-12 m-auto ">
+      <div  className="py-6  elementor-form-fields-wrapper3 elementor-labels- ">
+        <TextField
+        className="bg-white rounded"
+       style={{"width" : "100%" }}
+          inputRef={nameRef}
+          id="outlined-basic"
+          label="Name"
+          variant="outlined"
         />
-      </button>
-
-      {isOpen && (
-        <ul className="absolute top-full left-0 bg-white border rounded p-2 shadow-md">
-          {options.map((option) => (
-            <li
-            
-              key={option}
-              className="flex w-40 p-2 cursor-not-allowed hover:bg-gray-200" // Disable cursor and click events
-            >
-              <span className="mr-2">{option}</span>
-              <div className="flex">
-                <button
-                  className="mx-2"
-                  onClick={(e) => handleIncrement(option, e)}
-                >
-                  +
-                </button>
-                <span>{quantity[option] || 0}</span>
-                <button
-                  className="mx-2"
-                  onClick={(e) => handleDecrement(option, e)}
-                >
-                  -
-                </button>
-              </div>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-        <LocalizationProvider    dateAdapter={AdapterDayjs}  >
-          <DatePicker
-          dateFormat="yyyy-MM-dd"
-          onChange={handleDateChange}
-          label="Check In Date"
+        <TextField
+  className="bg-white rounded"
+  style={{"width" : "100%"}}
+          inputRef={emailRef}
+          id="outlined-basic"
+          label="Email"
+          variant="outlined"
         />
-        </LocalizationProvider>
-        <LocalizationProvider    dateAdapter={AdapterDayjs}  >
-        <DatePicker
-         dateFormat="yyyy-MM-dd"
-        label="Check Out Date"
-        onChange={handleCheckoutDateChange}
-      />
-        </LocalizationProvider>
+        <TextField
+  className="bg-white rounded"
+  style={{"width" : "100%"}}
+          inputRef={numberRef}
+          id="outlined-basic"
+          label="Number"
+          variant="outlined"
+        />
+        <div className="relative inline-block	">
+          <button
+            style={{ border: "1px solid #ccc", zIndex: "10px" }}
+            className="md:w-full text-white md:px-24 px-0 w-52   py-4 rounded  bg-white"
+            onClick={handleToggle}
+          >
+            {selectedOption || (
+              <span
+                dangerouslySetInnerHTML={{
+                  __html:
+                    '<i   class="fa fa-user" aria-hidden="true" style="color: #707070;"></i>',
+                }}
+              />
+            )}
+            <span className="text-black ml-4">{people}</span>
+
+            <span
+              dangerouslySetInnerHTML={{
+                __html:
+                  '<i class="fa fa-caret-down text-black ml-4"  style="color: #707070;" aria-hidden="true" ></i>',
+              }}
+            />
+          </button>
+
+          {isOpen && (
+            <ul className="z-50 absolute top-full left-0 bg-white border rounded p-2 shadow-md">
+              {options.map((option) => (
+                <li
+                  key={option}
+                  className="flex w-40 p-2 cursor-not-allowed hover:bg-gray-200" // Disable cursor and click events
+                >
+                  <span className="mr-2">{option}</span>
+                  <div className="flex">
+                    <button
+                      className="mx-2"
+                      onClick={(e) => handleDecrement(option, e)}
+                    >
+                      -
+                    </button>
+                    <span>{quantity[option] || 0}</span>
+                    <button
+                      className="mx-2"
+                      onClick={(e) => handleIncrement(option, e)}
+                    >
+                      +
+                    </button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <Select
+          className="w-full"
+          value={selectedCountry}
+          onChange={handleCountryChange}
+          options={countries}
+          placeholder="Select a Country"
+          style={{ fontFamily: "YourChosenFont, sans-serif" }}
+        />
+
         <button onClick={handleSubmit} className="custom-button">
-          <span>Inquiry Now</span>
+          <span>Inquire Now</span>
         </button>
 
-      {Object.keys(errors).length > 0 && (
-        <div   style={{"color" : "red"}} className="error-messages">
-          <ul>
-            {Object.values(errors).map((error, index) => (
-              <li key={index}>{error}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+        {Object.keys(errors).length > 0 && (
+          <div style={{ color: "red" }} className="error-messages">
+            <ul>
+              {Object.values(errors).map((error, index) => (
+                <li key={index}>{error}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
+      <ToastContainer />
+
     </div>
+
+
+
+</div>
   );
 };
 

@@ -1,16 +1,15 @@
 .ImageCard{
-    background-image: url('../../Images/rope_bg.jpg');
+    background-image: url('../../Images/premium_photo.avif');
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto;
+    min-height: 20rem;
 }
 .image-card-heading{
-    color: #06885C;
+    color: #0090B7;
 }
 .image-card-subheading{
-    color: #313E64;
+    color: black;
 }
-
 .ImageCard-para{
     padding: 10px 0px;
     color :#5E5766 ; 

@@ -34,7 +34,7 @@ const TourPackages = () => {
       }, []);
     return (
         <div className='bg-white p-4 sm:p-6 md:p-8'>
-            <h1     style={{"color"  :"#313E64"}}  className='Text-from-bottom text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black font-bold text-center'>
+            <h1     style={{"color"  :"#0090B7"}}  className='Text-from-bottom text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black font-bold text-center'>
                 Incredible  Tour Package
             </h1>
             <p className='Text-from-bottom text-black text-center py-2 sm:py-4 md:py-6'>

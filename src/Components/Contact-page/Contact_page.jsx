@@ -24,11 +24,10 @@ import Contact_Form from './Contact_Form';
 import { Helmet } from 'react-helmet';
 const Contact_Page = () => {
   const images = [
-    require('../../Images/eiffel-tower-in-paris.jpg'),
-    require('../../Images/evening-view-of-prague-bridges-over-vltava-river.jpg'),
-    require('../../Images/fukuoka-japan-skyline.jpg'),
-    require('../../Images/grand-canyon-arizona-usa-landscape.jpg'),
-  
+    require('../../Images/Banner2.jpg'),
+    require('../../Images/Banner2.jpg'),
+    require('../../Images/Banner2.jpg'),
+    require('../../Images/Banner2.jpg'),
   ];
 const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -44,9 +43,8 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const backgroundImageStyle = {
     backgroundSize: 'cover',
-    height: "100vh",
     backgroundRepeat: 'no-repeat',
-    backgroundImage: `linear-gradient(rgba(78, 89, 121, 0.7), rgba(78, 89, 121, 0.7)), url(${images[currentImageIndex]})`,
+    backgroundImage: `linear-gradient(rgba(78, 89, 121, 0.6), rgba(78, 89, 121, 0.6)), url(${images[currentImageIndex]})`,
     transition: 'background-image 1s ease',
   };
 
@@ -55,8 +53,8 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0);
     <Helmet>
     <meta charSet="utf-8" />
   <title>Contact Us - Worldwide Tours</title>
-  <link rel="canonical" href="https://worldwidetours.co/contact-us" /> 
   <meta name="description" content="Contact Worldwide Tours for inquiries, bookings, and travel assistance. We are here to help you plan your next adventure." />
+  <link rel="canonical" href="https://worldwidetours.co/Contact-us" />
   <meta name="keywords" content="contact, contact us, inquiries, bookings, travel assistance, worldwide tours" />
   <meta property="og:title" content="Contact Us - Worldwide Tours" />
   <meta property="og:description" content="Contact Worldwide Tours for inquiries, bookings, and travel assistance. We are here to help you plan your next adventure." />

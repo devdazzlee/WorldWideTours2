@@ -20,11 +20,10 @@ import DetailTours from './Tour';
 import { Helmet } from 'react-helmet';
 const DetailTour = () => {
   const images = [
-    require('../../Images/eiffel-tower-in-paris.jpg'),
-    require('../../Images/evening-view-of-prague-bridges-over-vltava-river.jpg'),
-    require('../../Images/fukuoka-japan-skyline.jpg'),
-    require('../../Images/grand-canyon-arizona-usa-landscape.jpg'),
-    // require('../../Images/kelingking-beach-nusa-penida-bali-indonesia.jpg'),
+    require('../../Images/Banner2.jpg'),
+    require('../../Images/Banner2.jpg'),
+    require('../../Images/Banner2.jpg'),
+    require('../../Images/Banner2.jpg'),
   ];
 const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -40,9 +39,9 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const backgroundImageStyle = {
     backgroundSize: 'cover',
-    height: "100vh",
     backgroundRepeat: 'no-repeat',
-    backgroundImage: `linear-gradient(rgba(78, 89, 121, 0.7), rgba(78, 89, 121, 0.7)), url(${images[currentImageIndex]})`,
+    backgroundImage: `linear-gradient(rgba(78, 89, 121, 0.6), rgba(78, 89, 121, 0.6)), url(${images[currentImageIndex]})`,
+
     transition: 'background-image 1s ease',
   };
 
@@ -51,8 +50,8 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0);
 <Helmet>
 <meta charSet="utf-8" />
   <title>Detail Tour - Worldwide Tours</title> 
-  <link rel="canonical" href="https://worldwidetours.co/detail-tour" /> 
   <meta name="description" content="Explore the details of this incredible tour. Get all the information you need, from itinerary to booking options, and embark on an unforgettable journey with Worldwide Tours." />
+  <link rel="canonical" href="https://worldwidetours.co/DetailTour" />
   <meta name="keywords" content="detail tour, tour details, tour itinerary, booking, travel, adventure, worldwide tours" />
   <meta property="og:title" content="Detail Tour - Worldwide Tours" />
   <meta property="og:description" content="Explore the details of this incredible tour. Get all the information you need, from itinerary to booking options, and embark on an unforgettable journey with Worldwide Tours." />
@@ -70,9 +69,12 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
       <div className='bg-white'  >
 
+      <div   className='py-12' > 
+
+<Testimonal />
+</div>
         <Promo />
-        <Reviews />
-        <Testimonal />
+
       </div>
 
       <Footer />

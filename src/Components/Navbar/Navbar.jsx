@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../Images/Worldwide-logo.svg';
+import logo from '../../Images/Asset9.svg';
 import './Navbar.css'
 
 const Navbar = () => {
@@ -12,17 +12,17 @@ const Navbar = () => {
 
   return (
     <nav
-      style={{ border: "1px solid #659494" }}
+      style={{ border: "1px solid #0090B7" }}
       className="border-gray-200 dark:bg-gray-900 dark:border-gray-700"
     >
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex mt-4 items-center">
-          <img src={logo} className="h-14	 mr-3" alt="Logo" />
-        </a>
+      <div   className="navbar-bg-color  max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
+      <Link className="flex mt-4 items-center"  to="/"  >
+      <img src={logo} className="h-16 mr-3" alt="Logo" />
+      </Link>
         <button
           onClick={toggleMobileMenu}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden "
           aria-controls="navbar-dropdown"
           aria-expanded={isMobileMenuOpen}
         >
@@ -44,28 +44,28 @@ const Navbar = () => {
           </svg>
         </button>
         <div
-          className={`${isMobileMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}
+          className={`${isMobileMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto `}
           id="navbar-dropdown"
         >
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
-            <li  class="block mt-4 py-2 pl-3 pr-4 text-gray-900 rounded  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" >
+            <li  class="font-extrabold	 nt-nav-links  block mt-4 py-2 pl-3 pr-4 text-white  " >
               <Link to="/">Home</Link>
             </li>
-            <li  class="block mt-4 py-2 pl-3 pr-4 text-gray-900 rounded  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" >
+            <li  class="font-extrabold	 nt-nav-links  block mt-4 py-2 pl-3 pr-4 text-white  " >
               <Link to="/Destination">Destinations</Link>
             </li>
-            <li  class="block mt-4 py-2 pl-3 pr-4 text-gray-900 rounded  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" >
-              <Link to="/DetailTour">Detail Tour</Link>
+            <li  class="font-extrabold	 nt-nav-links  block mt-4 py-2 pl-3 pr-4 text-white  " >
+              <Link to="/DetailTour">Persnolized Package</Link>
             </li>
-            <li  class="block mt-4 py-2 pl-3 pr-4 text-gray-900 rounded  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" >
+            <li  class="font-extrabold	 nt-nav-links  block mt-4 py-2 pl-3 pr-4 text-white  " >
               <Link to="/Contact-us">Contact Us</Link>
             </li>
             <li className='flex justifyc mt-2' >
-                                <i class="phone-icon fa-solid fa-phone-volume phone-icon text-2xl sm:text-4xl mr-4 mt-2"></i>
+                                <i  style={{"color":"#0090B7"}} class="phone-icon fa-solid fa-phone-volume phone-icon text-2xl sm:text-4xl mr-4 mt-2"></i>
 
                                 <div class="flex flex-col items-end">
-                                    <h5 class=" text-sm sm:text-base">Need help? Call us</h5>
-                                    <h1 class=" font-bold text-lg sm:text-xl">+92 342-3344040</h1>
+                                    <h5 class="text-white text-sm sm:text-base font-bold  ">Need help? Call us</h5>
+                                    <h1 class="text-white font-bold text-lg sm:text-xl">+92 342-3344040</h1>
                                 </div>
 
 

@@ -33,8 +33,8 @@ const Promo = () => {
       </p>
       <div className="text-center mt-2 sm:mt-2 md:mt-2 lg:mt-2">
 
-        <Link to={'/Contact-us  '} >
-        <button className="animation-from-bottom w-36 sm:w-36 md:w-36 lg:w-36 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <Link to={'/Contact-us  '} > 
+        <button style={{'background' :"#0090B7"}} className="animation-from-bottom w-36 sm:w-36 md:w-36 lg:w-36  text-white font-bold py-2 px-4 rounded">
           Claim promo
         </button>
         </Link>

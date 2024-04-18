@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './OfferCard.css'
 import '../Animation/Animation.css'
-import img1 from '../../Images/Asset 9.svg'
+import img1 from '../../Images/couple.png'
 import img2 from '../../Images/Asset 4.svg'
 import img3 from '../../Images/Asset 3.svg'
 
@@ -27,17 +27,24 @@ const OfferCards = () => {
 
 <div className='flex flex-wrap justify-center bg-white  main-Offer-card  '>
       <div className="Offer-card">
-      <img  className='w-16  m-auto'   src={img1} />
+      {/* <i    style={{"color" : "#0090B7"}} class="fa-solid fa-rings-wedding fa-10x"></i> */}
+      {/* <img  className='w-16  m-auto'   src={img1} /> */}
+      <i   style={{"color" :"#0090B7"}} class="fa fa-history fa-4x"  ></i>
+
         <h1>Destination weddings</h1>
         <p>Create the wedding of your dreams in a breathtaking destination with our specialized destination wedding services.</p>
       </div>
       <div className="Offer-card">
-      <img  className='w-16  m-auto'   src={img2} />
+        
+      <i     style={{"color" :"#0090B7"}} class='fas fa-glass-cheers fa-4x'></i>
+      {/* <img  className=' m-auto'   src={img2} /> */}
         <h1>Honeymoons</h1>
         <p>Celebrate your love story with an enchanting honeymoon in the world's most romantic destinations Our tailor-made honeymoon </p>
       </div>
       <div className="Offer-card">
-      <img  className='w-16  m-auto'   src={img3} />
+      <i      style={{"color" :"#0090B7"}}  class="fa fa-users fa-4x"></i>
+
+      {/* <img  className='  m-auto'   src={img3} /> */}
         <h1>Group getaways</h1>
         <p>Gather your friends or family for an unforgettable group getaway to create lasting memories. Our customized group travel packages</p>
       </div>

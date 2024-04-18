@@ -60,7 +60,7 @@
 
 /* Styling for the "Book Now" button */
 .book-now-button {
-  background-color: #007BFF;
+  background-color: #0090B7;
   color: #fff;
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -74,7 +74,6 @@
 
 /* Add a hover effect to the "Book Now" button */
 .book-now-button:hover {
-  background-color: #0056b3;
 }
 
 /* Media query for smaller screens */

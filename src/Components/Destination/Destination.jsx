@@ -19,11 +19,10 @@ import ImageSection from '../ImageSection/ImageSection';
 import { Helmet } from 'react-helmet';
 const Destination = () => {
   const images = [
-    require('../../Images/eiffel-tower-in-paris.jpg'),
-    require('../../Images/evening-view-of-prague-bridges-over-vltava-river.jpg'),
-    require('../../Images/fukuoka-japan-skyline.jpg'),
-    require('../../Images/grand-canyon-arizona-usa-landscape.jpg'),
-    // require('../../Images/kelingking-beach-nusa-penida-bali-indonesia.jpg'),
+    require('../../Images/Banner2.jpg'),
+    require('../../Images/Banner2.jpg'),
+    require('../../Images/Banner2.jpg'),
+    require('../../Images/Banner2.jpg'),
   ];
 const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -39,9 +38,9 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const backgroundImageStyle = {
     backgroundSize: 'cover',
-    height: "100vh",
     backgroundRepeat: 'no-repeat',
-    backgroundImage: `linear-gradient(rgba(78, 89, 121, 0.7), rgba(78, 89, 121, 0.7)), url(${images[currentImageIndex]})`,
+    backgroundImage: `linear-gradient(rgba(78, 89, 121, 0.6), rgba(78, 89, 121, 0.6)), url(${images[currentImageIndex]})`,
+
     transition: 'background-image 1s ease',
   };
 
@@ -50,7 +49,7 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0);
     <Helmet>
     <meta charSet="utf-8" />
   <title>Destinations - Worldwide Tours</title> 
-  <link rel="canonical" href="https://worldwidetours.co/destination" /> 
+  <link rel="canonical" href="https://worldwidetours.co/Destination" />
   <meta name="description" content="Discover our handpicked destinations from around the world. Plan your next adventure and explore breathtaking locations with Worldwide Tours." />
   <meta name="keywords" content="destinations, travel destinations, vacation spots, worldwide tours, adventure, travel" />
   <meta property="og:title" content="Destinations - Worldwide Tours" />
@@ -65,11 +64,11 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0);
       </div>
       <div className='bg-white h-auto flex flex-wrap'  >
 
-        <Card customClass="ImageCard" />
+        {/* <Card customClass="ImageCard" /> */}
       </div>
       <div className='h-auto '   >
 
-        <ImageFixed />
+        {/* <ImageFixed /> */}
         <DisplayCards />
       </div>
       <Continents />
@@ -79,9 +78,9 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
         <Testimonal />
         <Promo />
-        <Reviews />
+        {/* <Reviews /> */}
         <TourPackages />
-        <WorldBook />
+        {/* <WorldBook /> */}
       </div>
       <div className='bg-white' >
         <Contactus />

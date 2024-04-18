@@ -58,9 +58,17 @@ const Contact_Form = () => {
     const isFormValid = validateForm();
     if (isFormValid) {
       const contactData = { name, email, phone, company, message }
-      axios.post('https://brown-bear-tutu.cyclic.app/api/v1/contact', contactData)
+      axios.post('https://ill-plum-cape-buffalo-ring.cyclic.app/api/v1/contact', contactData)
         .then((response) => {
           alert('Form has been submitted');
+
+
+          setName('');
+          setEmail('');
+          setPhone('');
+          setCompany('');
+          setMessage('');
+  
         })
         .catch((error) => {
           console.error('Error creating contact:', error);
@@ -129,13 +137,13 @@ const Contact_Form = () => {
             <div className="p-2 w-1/2">
               <div className="relative">
                 <label for="company" className="leading-7 text-sm text-gray-600">
-                  Company
+                Visiting Place
                 </label>
                 <input
                   type="text"
                   id="company"
                   name="company"
-                  placeholder="Company"
+                  placeholder=" Visiting Place"
                   value={company}
                   onChange={(e) => setCompany(e.target.value)}
                   className="w-full bg-gray-100 rounded border border-gray-300 focus-border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -162,7 +170,7 @@ const Contact_Form = () => {
             <div className="p-2 w-full">
               <button
                 onClick={handleSubmit}
-                style={{ backgroundColor: '#007BFF' }}
+                style={{ backgroundColor: '#0090B7' }}
                 className="flex items-center mx-auto text-white border-0 py-2 px-8 focus:outline-none hover-bg-indigo-600 rounded text-lg"
               >
                 <i className="fa fa-paper-plane mr-2" aria-hidden="true"></i>

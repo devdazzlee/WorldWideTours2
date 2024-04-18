@@ -14,7 +14,14 @@
     position: relative;
     bottom: 30px;
   }
-
+  .elementor-form-fields-wrapper3{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
   /* Style the form field group */
   .elementor-field-group {
     flex: 1;
@@ -54,7 +61,7 @@
 
   /* Style the submit button */
   .elementor-button {
-    background-color: #007BFF;
+    background-color: #0090B7;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -66,7 +73,7 @@
 .custom-select {
     width: 100%;
     padding: 10px 20px ;
-    border: 1px solid #007BFF;
+    border: 1px solid #0090B7;
     border-radius: 5px;
     background-color: #f7f7f7;
     font-size: 16px;
@@ -77,7 +84,7 @@
   .custom-input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #007BFF;
+    border: 1px solid #0090B7;
     border-radius: 5px;
     font-size: 16px;
     color: #333;
@@ -85,7 +92,7 @@
   
   /* Custom styles for the button */
   .custom-button {
-    background-color: #007BFF;
+    background-color: #0090B7;
     color: #fff;
     padding: 10px 20px;
     border: none;

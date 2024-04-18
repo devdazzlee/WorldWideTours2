@@ -28,7 +28,7 @@ const ImageFixed = () => {
       <div className="overlay"></div>
       <div className="content">
         <h1 className=" main-center-text text-3xl sm:text-4xl md:text-5xl text-white font-bold text-center">
-          No matter where you’re <br /> going from, we take you <br /> there.
+          No matter where you’re <br /> going, We will get you  <br /> there.
         </h1>
         <p className=" main-center-text text-white text-center mt-2 sm:mt-4">
         we are your trusted partner in getting you to your destination.<br />  We provide seamless and reliable transportation solutions, ensuring you

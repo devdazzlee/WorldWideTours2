@@ -36,7 +36,7 @@ const Card = () => {
     <div className={`ImageCard py-10`} >
       <div className="flex leftCardAnimation flex-col-reverse md:flex-row">
         <div className={`w-full md:w-1/2 p-4 text-center md:text-left md:ml-20`}>
-          <h3 className="text-2xl md:text-md text-white font-bold my-4 image-card-heading">WHO WE ARE</h3>
+          <h3 style={{ color: '#06885C' }}  className="text-2xl md:text-md text-white font-bold my-4 image-card-heading">WHO WE ARE</h3>
           <h1 className="text-4xl font-bold image-card-subheading">
             Traveling opens the door to <br /> creating memories.
           </h1>
@@ -53,7 +53,7 @@ const Card = () => {
           </Link>
         </div>
         <div className=" w-full md:w-1/2">
-          <img style={{ "borderRadius": "2%" }} className='w-full image-animation' src={img1} alt="Travel Image" />
+          <img style={{ "borderRadius": "2%" }} className='w-full image-animation' src={'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} alt="Travel Image" />
         </div>
       </div>
     </div>

@@ -29,7 +29,7 @@ const Offer = () => {
     <div className='bg-white'>
     <div className="sm:flex sm:justify-center text-center">
       <div className="p-4 sm:ml-0 md:ml-20">
-        <h3 className="heading-center-text text-2xl md:text-md text-white font-bold my-4 image-card-heading">WHO WE ARE</h3>
+        <h3  style={{ color: '#06885C' }}  className="heading-center-text text-2xl md:text-md text-white font-bold my-4 image-card-heading">WHO WE ARE</h3>
         <h1 className="heading-center-text text-4xl font-bold image-card-subheading">
           Explore the world and<br /> become your own tour <br /> guide.
         </h1>

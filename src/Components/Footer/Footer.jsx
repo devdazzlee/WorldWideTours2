@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import logo from '../../Images/Worldwide-logo.svg';
+import logo from '../../Images/Asset9.svg';
 import './Footer.css';
 
 function Footer() {
@@ -18,16 +18,16 @@ function Footer() {
               WorldTour.co is your passport to unforgettable adventures, offering expertly crafted travel experiences to destinations across the globe.
             </p>
             <div className="flex gap-4 mt-2">
-              <a href="https://www.facebook.com" className="text-blue-500 hover:text-blue-700">
+              <a href="https://www.facebook.com/worldwiidetours" className="text-blue-500 hover:text-blue-700">
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
               </a>
-              <a href="https://www.twitter.com" className="text-blue-500 hover:text-blue-700">
+              <a href="https://www.instagram.com/world.widetours" className="text-blue-500 hover:text-blue-700">
                 <FontAwesomeIcon icon={faTwitter} size="2x" />
               </a>
-              <a href="https://www.instagram.com" className="text-pink-500 hover:text-pink-700">
+              <a href="https://www.instagram.com/world.widetours" className="text-pink-500 hover:text-pink-700">
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
               </a>
-              <a href="https://www.linkedin.com" className="text-blue-700 hover:text-blue-900">
+              <a href="https://www.facebook.com/worldwiidetours" className="text-blue-700 hover:text-blue-900">
                 <FontAwesomeIcon icon={faLinkedin} size="2x" />
               </a>
             </div>
@@ -38,46 +38,64 @@ function Footer() {
             <div className="border-b-2 border-red-600 w-10"></div>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link to="/Corporate">Asia</Link>
+                <Link to="/DetailTour">Asia</Link>
               </li>
               <li>
-                <Link to="/TechnicalService">Europe</Link>
+                <Link to="/DetailTour">Europe</Link>
               </li>
               <li>
-                <Link to="/Corporate">North America</Link>
+                <Link to="/DetailTour">North America</Link>
               </li>
               <li>
-                <Link to="/OurDocument">South America</Link>
+                <Link to="/DetailTour">South America</Link>
               </li>
               <li>
-                <Link to="/PrivacyPolicy">Africa</Link>
-              </li>
-              <li>
-                <Link to="/PrivacyPolicy">Oceania</Link>
+                <Link to="/DetailTour">Africa</Link>
               </li>
             </ul>
           </div>
-
+          
           <div className="sm:mt-0">
             <h2 className="text-2xl font-bold mb-2">Support</h2>
             <div className="border-b-2 border-red-600 w-10"></div>
             <ul className="mt-4 space-y-2">
+            <Link to="/Contact-us">
               <li><a href="#">Help center</a></li>
+            </Link>
+            <Link to="/Contact-us">
+
               <li><a href="#">FAQ</a></li>
+            </Link>
+            <Link to="/Contact-us">
+
               <li><a href="#">Contact us</a></li>
+            </Link>
+            <Link to="/DetailTour">
               <li><a href="#">Send Ticket</a></li>
+            </Link>
             </ul>
           </div>
 
           <div className="sm:mt-0">
-            <h2 className="text-2xl font-bold mb-2">Company</h2>
+            <h2 className="text-2xl font-bold mb-2">Pages</h2>
             <div className="border-b-2 border-red-600 w-10"></div>
             <ul className="mt-4 space-y-2">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Leadership</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Blog & News</a></li>
-              <li><a href="#">Legal Notice</a></li>
+            <Link to="/">
+              <li><a href="#">Home</a></li>
+            </Link>
+            <Link to="/Destination">
+              <li><a href="#">Destinations</a></li>
+            </Link>
+            <Link to="/DetailTour">
+
+              <li><a href="#">Packages</a></li>
+            </Link>
+            <Link to="/Contact-us">
+
+
+              <li><a href="#">  Contact Us</a></li>
+            </Link>
+            
             </ul>
           </div>
         </div>
